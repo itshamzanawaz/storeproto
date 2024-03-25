@@ -38,7 +38,7 @@ const Banners = () => {
     {banners.map((banner)=>{
 
         return (
-            <Link href={'/Product'} key={banner.slug}>
+            <Link href={'/category/newin'} key={banner.slug}>
                 <img className='bannerImage' src={banner.image[0].url} alt='banner' />
             </Link>
         )

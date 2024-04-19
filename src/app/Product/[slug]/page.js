@@ -103,9 +103,11 @@ export default function Product({ params }) {
             <button className="w-28 sm:w-40 h-16 text-white rounded-md mx-2 bg-teal-700 hover:transition-all hover:scale-110 p-3"  onClick={() => onAdd(product, 1)}>
               Add to Cart
             </button>
-            <button className="w-28 sm:w-40 h-16 text-white rounded-md mx-2 bg-red-600 hover:transition-all hover:scale-110 p-3" onClick={()=>{return <Link href='/Checkout'></Link>}}>
+            <Link href={'/Checkout'} onClick={() => onAdd(product, 1)}>
+            <button className="w-28 sm:w-40 h-16 text-white rounded-md mx-2 bg-red-600 hover:transition-all hover:scale-110 p-3" >
               Buy Now
             </button>
+            </Link>
             </div>
             </div>
         )}

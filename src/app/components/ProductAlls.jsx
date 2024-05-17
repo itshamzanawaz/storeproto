@@ -81,7 +81,7 @@ const { loading, error, data, refetch } = useQuery(MY_QUERY, { client });
         defaultValue="createdAt_ASC"
         style={{ width: 200 }}
         onChange={handleChange}
-        className="text-center min-center"
+        className="text-center"
       >
         <Option value="createdAt_ASC">Newest</Option>
         <Option value="price_ASC">Price Low to High</Option>

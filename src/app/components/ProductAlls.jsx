@@ -6,6 +6,7 @@ import React from "react";
 import { Card } from "antd";
 import { useState } from "react";
 import { Select } from "antd";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const { Meta } = Card;
 
@@ -39,7 +40,9 @@ const ProductAlls = () => {
 const { loading, error, data, refetch } = useQuery(MY_QUERY, { client });
 
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className="loader-center">
+  <ClipLoader />
+</p>;
   if (error) return console.log(error,'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
 
   // return data when it's available
@@ -78,7 +81,7 @@ const { loading, error, data, refetch } = useQuery(MY_QUERY, { client });
         defaultValue="createdAt_ASC"
         style={{ width: 200 }}
         onChange={handleChange}
-        className="text-center"
+        className="text-center min-center"
       >
         <Option value="createdAt_ASC">Newest</Option>
         <Option value="price_ASC">Price Low to High</Option>

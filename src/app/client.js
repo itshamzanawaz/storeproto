@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-
+const endpoint = process.env.NEXT_PUBLIC_SECRET
 const client = new ApolloClient({
-  uri: 'https://api-ap-south-1.hygraph.com/v2/clt05bx260pne07wekcgnv3a2/master',
+  uri: endpoint,
   cache: new InMemoryCache(),
 });
 
